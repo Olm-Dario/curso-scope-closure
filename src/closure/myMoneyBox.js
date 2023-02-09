@@ -36,3 +36,22 @@ const myMoneyBoxAna = moneyBox();
 myMoneyBoxAna(2);
 myMoneyBoxAna(2);
 myMoneyBoxAna(2);
+
+
+/* Otro ejemplo */
+function createPetList() {
+  const petList = [];
+  return function addPet(myPet) {
+    if (myPet) {
+      petList.push(myPet);
+    }
+    return petList;
+  }
+}
+
+const petList = createPetList();
+
+petList('dog');
+petList('cat');
+
+console.log(petList())
